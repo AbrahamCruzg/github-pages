@@ -1,0 +1,71 @@
+html_content = """
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores Amarillas</title>
+  <style>
+    @keyframes moverFlores {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    body {
+      background-color: #f3f4f6;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .mensaje {
+      font-size: 2em;
+      color: #FFB300;
+      margin-top: 50px;
+      font-weight: bold;
+      animation: moverFlores 2s ease-in-out infinite;
+    }
+
+    .flores-container {
+      position: relative;
+      margin-top: 30px;
+    }
+
+    .flor {
+      position: absolute;
+      animation: moverFlores 4s ease-in-out infinite;
+    }
+
+    .flor1 { top: 10px; left: 50px; }
+    .flor2 { top: 50px; left: 120px; }
+    .flor3 { top: 150px; left: 200px; }
+    .flor4 { top: 100px; left: 300px; }
+    .flor5 { top: 200px; left: 500px; }
+
+  </style>
+</head>
+<body>
+  <div class="mensaje">A mi manera te traigo tus flores amarillas</div>
+  
+  <div class="flores-container">
+    <img src="https://www.pngkit.com/png/detail/109-1092039_yellow-flower-png-yellow-flower-png-image.png" alt="Flor Amarilla" class="flor flor1" width="50">
+    <img src="https://www.pngkit.com/png/detail/109-1092039_yellow-flower-png-yellow-flower-png-image.png" alt="Flor Amarilla" class="flor flor2" width="50">
+    <img src="https://www.pngkit.com/png/detail/109-1092039_yellow-flower-png-yellow-flower-png-image.png" alt="Flor Amarilla" class="flor flor3" width="50">
+    <img src="https://www.pngkit.com/png/detail/109-1092039_yellow-flower-png-yellow-flower-png-image.png" alt="Flor Amarilla" class="flor flor4" width="50">
+    <img src="https://www.pngkit.com/png/detail/109-1092039_yellow-flower-png-yellow-flower-png-image.png" alt="Flor Amarilla" class="flor flor5" width="50">
+  </div>
+</body>
+</html>
+"""
+
+# Guardar el archivo HTML
+with open("flores_amarillas.html", "w") as file:
+    file.write(html_content)
+
+print("Archivo HTML generado exitosamente.")
